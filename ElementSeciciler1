@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Dahil Etme</title>
+    <script src="Kütüphane/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("tr:even").css("background-color","red");
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2 class="result">JQUERY EĞİTİM SETİ</h2>
+    <p id="ilk">Tıkla bana JQUERY Gücünü gör</p>
+    <p class="result">Bana da Tıkla ve kolay Javascript yazmanın hazzını al</p>
+    <p>Hadi bana da bana  da :</p>
+
+    <table border="1">
+        <tr>
+            <th>Software </th>
+            <th>Language</th>
+        </tr>
+        <tr>
+            <th>JavaScript</th>
+            <th>English</th>
+        </tr>
+        <tr>
+            <th>Angular JS</th>
+            <th>English</th>
+        </tr>
+        <tr>
+            <th>React JS</th>
+            <th>English</th>
+        </tr>
+        <tr>
+            <th>Vue JS</th>
+            <th>English</th>
+        </tr>
+        <tr>
+            <th>Node JS</th>
+            <th>English</th>
+        </tr>
+    </table>
+
+    <p>LİST1</p>
+    <ul>
+        <li>JAVA</li>
+        <li>C</li>
+        <li>C#</li>
+        <li>PYTHON</li>
+
+    </ul>
+    <p>LİST2</p>
+    <ul>
+        <li>MATEMATİK</li>
+        <li>TÜRKÇE</li>
+        <li>SOSYAL</li>
+        <li>FEN</li>
+
+    </ul>
+
+    <p><a href="#" target="_blank">JavaScript Öğreniyorum</a></p>
+    <p><a href="#" >JQuery Öğreniyorum</a></p>
+    <button type="button">Click Me</button>
+</body>
+</html>

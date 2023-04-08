@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Kütüphane/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p class="ilk">Has Kullanımını anlayacağım burada. Div benim ebeveynim</p>
+    </div>
+    <div></div>
+    <p><input type="image" src="armut.jpeg"></p>   <!-- Cihazınızda buunan bir resim ekleyiniz. -->
+
+    <form >
+        <p>
+            <label >Username</label>
+            <input type="text" id="username">
+        </p>
+        <p>
+            <label >Password</label>
+            <input type="password" id="password">
+        </p>
+        <p>
+            <label >E-mail</label>
+            <input type="email" id="email" value="casc@gmail.com" disabled>
+        </p>
+        <p>
+            <label >Message</label>
+           <textarea id="Message" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="checkbox"id="agree">Sözleşmeyi okudum ve kabul ettim.
+        </p>
+        <p>
+            <label >
+                <input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0">Bay
+            </label>
+            <br>
+            <label >
+                <input type="radio" name="RadioGroup1" value="0" id="RadioGroup1_1">Bayan
+            </label>
+            <br>
+        </p>
+        <p> <input type="file"></p>
+        <p><input type="reset" value="clear"></p>
+        <p><input type="submit" value="Send"></p>
+    </form>
+    <ul>
+        <li><a href="#">JAVA</a> </li>
+        <li><a href="#">C</a></li>
+        <li><a href="#">C#</a></li>
+        <li><a href="#">PYTHON</a></li>
+
+    </ul>
+        <button type="button">Click me</button>
+
+
+</body>
+
+<script>
+      $(document).ready(function(){
+            $("button").click(function(){
+                $("div:has(p)").css("background-color","red").css("width","200").css("height","200");
+            })
+        })
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Kütüphane/jquery-3.6.4.min.js"></script>
+    <title>Event Olayları 3</title>
+</head>
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p>Lütfen bana tıkla!</p>
+    <p>Bana da tıkla ve keyfine bak!</p>
+    <p>Kullanıcı Adı: <input type="text" name="username" id="username"></p>
+    <button id="btn">Click</button>
+    <p> Pencere boyutu <span id="degisme">0</span> kez değişti. </p>
+    <p>En: <span id="en"></span>0</p>
+    <p>Boy: <span id="boy"></span>0</p>
+    <div style="border: 1px solid black; width:100px ;overflow: scroll;">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis nemo laboriosam quos asperiores, eos rem reprehenderit perferendis optio distinctio ipsam ratione hic officiis, corrupti in eveniet earum labore al
+    </div>
+    <p><span id="scroll">0</span> KEZ scroll yaptın</p>
+
+    <p>Username:<input type="text" id="username"></p>
+    <p id="result">hELLO wORLDDD</p>
+    <button type="button" id="btn1">Click Me</button>
+    <script>
+        $(function(){
+            $("p").one("click",function(){
+                $(this).animate({fontSize:"+=6px"})
+            })
+        })
+        $(function(){
+           var objPerson={
+                 name:"Emirhan",
+                 age:20,
+                 test:function(){
+                    $("p").text("İsim: "+ this.name+ "Yaş: "+this.age)
+                 }
+           }
+           $("#btn").click($.proxy(objPerson,"test"));
+        })
+        $(function(){
+            var x=0
+            $(window).resize(function(){
+                $("#degisme").text(x+=1)
+            })
+        })
+        $(function(){
+            var e,b;
+            e=$(window).width();
+            b=$(window).height();
+            $("#en").text(e);
+            $("#boy").text(b);
+
+            $(window).resize(function(){
+            e=$(window).width();
+            b=$(window).height();
+            $("#en").text(e);
+            $("#boy").text(b);
+            })
+        })
+        $(function(){
+            var x=0;
+            $("div").scroll(function(){
+                $(this).css("background-color","red")
+                $("#scroll").text(x+=1)
+            })
+        })
+        $(function(){
+            $("#username").change(function(){
+                $("#result").text("Bana Tıkladınn")
+            })
+        })
+        $(function(){
+           $("#btn1").click(function(){
+            $("#username").trigger("select")
+           })
+        })
+    </script>
+</body>
+</html>
+

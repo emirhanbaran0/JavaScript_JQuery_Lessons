@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Kütüphane/jquery-3.6.4.min.js"></script>
+    <title>Event Olayları 2</title>
+</head>
+<body>
+    
+    <h2>JQuery Eğitim Seti</h2>
+    <p>Lütfen bana tıkla!</p>
+    <p>Bana da tıkla ve keyfine bak!</p>
+    <button type="button" id="btn">Click</button>
+    <p>Username: <input type="text" id="username"></p>
+    <p id="result">Hello World!</p>
+    <script>
+        //  $(function(){
+        //     $("p").on("click",function(){
+        //         $("p,h2").css("background-color","red").css("height","150px")
+        //     })
+        //     $("button").click(function(){
+        //         $("#btn").off("click")
+        //     })
+        // })
+       
+        $(function(){
+            $("#username").change(function(){
+                alert("Bu kutuda Değişiklik Yaptın")
+            })
+        })
+        $(function(){
+            $("#username").select(function(){
+                $("#result").text("Hii There!")
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <script src="Kütüphane/jquery-3.6.4.min.js"></script>
+    <title>Event Olayları</title>
+</head>
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <p>Lütfen bana tıkla!</p>
+    <p>Bana da tıkla ve keyfine bak!</p>
+    <p>Kullanıcı Adı: <input type="text" name="username" id="username"></p>
+    <p>Email: <input type="email" name="email" id="email"></p>
+    <p>Key Press Sayısı: <span>0</span></p>
+    <script>
+        // $(function(){
+        //     $("p,h2").mouseenter(function(){
+        //         $(this).css("background","red")
+        //     })
+        // })
+        // $(function(){
+        //     $("p").mouseleave(function(){
+        //         $(this).css("background","black")
+        //     })
+        // })
+        // $(function(){
+        //     $("p").hover(function(){
+        //         $(this).css("font-size","200%")
+        //     },function(){
+        //         $("h2").css("background-color","pink")
+        //     })
+        // })
+        // $(function(){
+        //     $("p").dblclick(function(){
+        //         alert("Tebrikler Büyük bir sırrı açığa çıkardınız!")
+        //     })
+        // })
+        // $(function(){
+        //     $("#username").focus(function(){
+        //         $(this).css("width","200px")
+        //     })
+        // })
+        // $(function(){
+        //     $("#email").blur(function(){
+        //        $(this).css("background-color","gray")
+        //     })
+        // })
+        // $(function(){
+        //     var i=0
+        //     $("input").keypress(function(){
+        //        $("span").text(i+=1)
+        //     })
+        // })
+        // $(function(){
+        //     $("p").mousedown(function(){
+        //         $("h2").hide()
+        //         alert("Başlığı Kaybettik ://")
+        //     })
+        // })
+        $(function(){
+            $("p").on({
+                mouseenter:function(){
+                    $(this).css("background-color","darkyellow").css("height","900px")
+                },
+                mouseleave:function(){
+                    $(this).css("background-color","height","50px")
+                },
+                dblclick:function(){
+                    $("p").css("bacground-color","green")
+                }
+            })
+        })
+    </script>
+</body>
+</html>

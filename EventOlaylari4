@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Kütüphane/jquery-3.6.4.min.js"></script>
+    <title>Event Olayları 4</title>
+</head>
+<body>
+    <p>JQuery Eğitim Seti</p>
+    <p>Jquery ile eventlerin tamamına hakim oluyorum</p>
+    <p><input type="text" name="username" id="username"><span id="result"></span></p>
+
+    <div>
+        Username: <input type="text" name="username" id="username1"><br><br>
+        Password: <input type="password" name="sifre" id="sifre">
+    </div>
+        <p id="resim">Benim Alanım<img src="armut.jpeg"></p>
+        <span id="say"></span>
+    <script>
+        // $(function(){
+        //     var i=0;
+        //     $("p").hover(function(){
+        //         $(this).css("background-color","green")
+        //     },function(){
+        //         $(this).css("background-color","red")
+        //     })
+        // })
+
+        // $(function(){
+        //     $("input").focus(function(){
+        //         $("#result").text("Kullanıcı adını Giriniz")
+        //     })
+        // })
+
+        
+        // $(function(){
+        //     $("input").blur(function(){
+        //         $(this).css("background-color","red")
+        //     })
+        // })
+        
+        // $(function(){
+        //     $("div").focusin(function(){
+        //          $("#result").text("Kullanıcı adınıveya Şifreyi  Giriniz")
+        //     })
+        // })
+        // $(function(){
+        //     $("div").focusout(function(){
+        //         $(this).css("background-color","red")
+        //     })
+        // })
+
+        $(function(){
+            $("#resim").mouseover(function(){
+                $("img").css("width","200")
+            })
+        })
+        $(function(){
+            $("#resim").mouseout(function(){
+                $("img").css("width","500")
+            })
+        })
+        $(function(){
+            var i=1;
+            $("p").mousemove(function(){
+                $("#say").text(i+=2)
+            })
+        })
+    </script>
+</body>
+</html>
